@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="home-title" id="title">
+        Hello
+    </div>
+    <div class="container">
+        <button class="create-button" id="homebutton">Create User</button>
+        <button class="login-button" id="homebutton">Login User</button>
+        <button class="view-button" id="homebutton">view Details</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="addUserModal" class="add-user-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="heading">
+                <h3 id="modal-title">ADD USERS</h3>
+                <span class="close-button"><i class="fa-regular fa-circle-xmark fa-lg"></i></span>
+            </div>
+            <p class="error-message"> 
+            </p>
+            <form id="userForm" class="addUserForm" action="AddServlet" onsubmit ="return validateFields()" method="post">
+                <input type="hidden" name="customerId" id="customerId">
+                <div class="form-elements">
+                    <label for="name">User Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter User Name">
+                </div>
+                <div id="nameError" class="error"></div>
+
+                <div class="form-elements">
+                    <label for="age">Password:</label>
+                    <input type="password" name="age" id="age" placeholder="Enter Password">
+                </div>
+                <div id="ageError" class="error"> </div>
+
+                <div class="form-elements">
+                    <label for="mobile">Confirm Password:</label>
+                    <input type="password" name="mobile" id="mobile" placeholder="Re Enter the Password" >
+                </div>
+        
+                <div class="form-button">
+                    <input class="reset-button" type="reset" value="Reset">
+                    <input class="submit-button" type="submit" value="Submit" id="form-submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>         
+
+    
+</body>
+</html>
